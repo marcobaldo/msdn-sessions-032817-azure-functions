@@ -1,0 +1,19 @@
+﻿{
+  "bindings": [
+    {
+      "name": "raw",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "raw-images/{imageName}",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "blob",
+      "name": "thumbnail",
+      "path": "thumbs/{imageName}",
+      "connection": "AzureWebJobsStorage",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
